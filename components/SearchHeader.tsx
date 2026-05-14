@@ -41,7 +41,9 @@ export function SearchHeader({ initialQuery }: { initialQuery: string }) {
           <div
             className={[
               "grid items-center gap-x-2",
-              stuck ? "grid-cols-[auto_1fr]" : "grid-cols-1 gap-y-3",
+              stuck
+                ? "grid-cols-[auto_minmax(0,1fr)]"
+                : "grid-cols-[minmax(0,1fr)] gap-y-3",
             ].join(" ")}
           >
             <Link
