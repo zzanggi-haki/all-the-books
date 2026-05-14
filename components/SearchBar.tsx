@@ -151,9 +151,9 @@ export function SearchBar({
             highlighted >= 0 ? `suggestion-${highlighted}` : undefined
           }
           className={[
-            "flex-1 rounded-lg bg-canvas text-ink placeholder:text-stone border border-hairline-strong focus:outline-none focus:border-primary focus:border-2 transition-shadow",
+            "flex-1 min-w-0 rounded-lg bg-canvas text-ink placeholder:text-stone border border-hairline-strong focus:outline-none focus:border-primary focus:border-2 transition-shadow",
             isHero
-              ? "h-14 sm:h-16 px-5 sm:px-6 focus:px-[19px] sm:focus:px-[23px] text-[17px] sm:text-[18px] shadow-sm focus:shadow-md"
+              ? "h-14 sm:h-16 px-4 sm:px-6 focus:px-[15px] sm:focus:px-[23px] text-[16px] sm:text-[18px] shadow-sm focus:shadow-md"
               : "h-12 px-4 focus:px-[15px] text-[16px]",
           ].join(" ")}
         />
@@ -162,8 +162,8 @@ export function SearchBar({
           className={[
             "shrink-0 rounded-lg bg-primary text-on-primary font-medium tracking-[0.01em] hover:bg-primary-deep active:bg-primary-deep transition-colors",
             isHero
-              ? "h-14 sm:h-16 px-6 sm:px-8 text-[15px] sm:text-[16px]"
-              : "h-12 px-6 text-[14px]",
+              ? "h-14 sm:h-16 px-5 sm:px-8 text-[15px] sm:text-[16px]"
+              : "h-12 px-5 text-[14px]",
           ].join(" ")}
         >
           검색

@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <main className="flex-1 flex flex-col">
       <section
-        className="flex-1 flex flex-col items-center justify-center px-6 py-20 sm:py-28"
+        className="flex-1 flex flex-col items-center justify-center px-5 sm:px-6 py-20 sm:py-28"
         style={{
           background:
             "radial-gradient(ellipse 80% 60% at 50% 0%, var(--color-cream) 0%, var(--color-surface) 60%)",
         }}
       >
         <div className="w-full max-w-2xl">
-          <h1 className="display text-[44px] sm:text-[64px] text-ink">
+          <h1 className="display text-[36px] sm:text-[64px] text-ink">
             한 권의 책,
             <br />
             가장 좋은 가격으로.
