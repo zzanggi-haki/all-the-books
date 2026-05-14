@@ -29,7 +29,7 @@ export function Footer() {
           Made by <span className="text-ink font-medium">zzanggi</span>
           <span className="text-stone"> · </span>
           <a
-            href="https://github.com/zzanggi"
+            href="https://github.com/zzanggi-haki/all-the-books"
             target="_blank"
             rel="noopener noreferrer"
             className="text-ink hover:text-primary transition-colors"
