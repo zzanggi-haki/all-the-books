@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+
+@theme {
+  --font-sans:
+    "Pretendard Variable", -apple-system, BlinkMacSystemFont, system-ui,
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+  /* Brand & Accent */
+  --color-primary: #fa500f;
+  --color-primary-deep: #c73e07;
+  --color-sunshine-300: #ffd27d;
+  --color-sunshine-500: #f7b237;
+  --color-sunshine-700: #ed8910;
+  --color-sunshine-800: #d17407;
+  --color-sunshine-900: #b05a03;
+  --color-yellow-saturated: #facc15;
+
+  /* Cream / Neutral Warm */
+  --color-cream: #fff4d6;
+  --color-cream-soft: #fffaec;
+  --color-cream-deeper: #ffe6a8;
+  --color-beige-deep: #e8dbb5;
+  --color-footer-cream: #fbf2dc;
+
+  /* Surface */
+  --color-canvas: #ffffff;
+  --color-surface: #faf9f5;
+  --color-surface-cream: #fffaec;
+  --color-surface-code: #1a1a1a;
+  --color-hairline: #e4e4e7;
+  --color-hairline-soft: #f1efe8;
+  --color-hairline-strong: #a1a1aa;
+
+  /* Text */
+  --color-ink: #1a1a1a;
+  --color-ink-tint: #2d2d2d;
+  --color-charcoal: #2d2d2d;
+  --color-slate: #52525b;
+  --color-steel: #71717a;
+  --color-stone: #a1a1aa;
+  --color-muted: #d4d4d8;
+  --color-on-dark: #ffffff;
+  --color-on-cream: #1a1a1a;
+  --color-on-primary: #ffffff;
+
+  /* Radius */
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+}
+
+html,
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchor scroll targets keep their header visible (not hidden behind sticky search header ~70px) */
+.scroll-target {
+  scroll-margin-top: 88px;
+}
+
+/* Display utility — editorial-style headlines (Pretendard with tighter tracking) */
+.display {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+}
+
+/* Sunset stripe — signature element at every page bottom */
+.sunset-stripe {
+  height: 14px;
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-sunshine-700) 28%,
+    var(--color-sunshine-500) 55%,
+    var(--color-yellow-saturated) 78%,
+    var(--color-cream) 100%
+  );
+}
+
+/* Tabular numbers — used for prices */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
