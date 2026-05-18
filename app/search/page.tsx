@@ -183,9 +183,6 @@ async function Results({ query }: { query: string }) {
             badge="외부 검색"
           />
         </div>
-        <p className="text-[12px] text-stone mt-2">
-          예스24 / 밀리의서재는 곧 추가됩니다.
-        </p>
       </section>
 
       {alternatives.length > 0 && (
