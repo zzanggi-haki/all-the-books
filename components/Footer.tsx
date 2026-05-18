@@ -6,7 +6,7 @@ export function Footer() {
         <div className="flex flex-wrap items-baseline justify-center gap-x-2 gap-y-0.5">
           <span className="text-[15px] font-semibold text-ink inline-flex items-center gap-1.5">
             <span aria-hidden="true">📚</span>
-            AllTheBooks
+            HowMuchBook
           </span>
           <span className="text-stone">:</span>
           <span className="text-[13px] text-charcoal">
@@ -29,7 +29,7 @@ export function Footer() {
           Made by <span className="text-ink font-medium">zzanggi</span>
           <span className="text-stone"> · </span>
           <a
-            href="https://github.com/zzanggi-haki/all-the-books"
+            href="https://github.com/zzanggi-haki/howmuchbook"
             target="_blank"
             rel="noopener noreferrer"
             className="text-ink hover:text-primary transition-colors"

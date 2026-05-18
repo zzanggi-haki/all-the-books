@@ -4,8 +4,8 @@ import { Footer } from "@/components/Footer";
 import { SunsetStripe } from "@/components/SunsetStripe";
 
 export const metadata: Metadata = {
-  title: "AllTheBooks — 책 한 번에 비교",
-  description: "한 권의 책을 알라딘 중고/매장/eBook에서 한눈에 비교",
+  title: "HowMuchBook — 이 책 얼마야?",
+  description: "한 권의 책을 알라딘 중고/매장/eBook + 리디북스에서 한눈에 비교",
 };
 
 export const viewport: Viewport = {

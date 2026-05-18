@@ -13,9 +13,7 @@ export default function Home() {
       >
         <div className="w-full max-w-2xl">
           <h1 className="display text-[36px] sm:text-[64px] text-ink">
-            한 권의 책,
-            <br />
-            가장 좋은 가격으로.
+            이 책 얼마야?
           </h1>
 
           <p className="mt-6 text-[17px] sm:text-[18px] text-slate leading-[1.55] max-w-xl">
