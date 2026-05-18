@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { Suspense } from "react";
 import { BookCard } from "@/components/BookCard";
+import { ExternalSearchLink } from "@/components/ExternalSearchLink";
 import { OfferRow } from "@/components/OfferRow";
 import { SearchHeader } from "@/components/SearchHeader";
 import { StoreTabsList } from "@/components/StoreTabsList";
 import { SummaryCards } from "@/components/SummaryCards";
+import { buildRidiSearchUrl } from "@/lib/providers/ridi";
 import { search } from "@/lib/search";
 
 export const dynamic = "force-dynamic";
@@ -147,24 +149,44 @@ async function Results({ query }: { query: string }) {
         )}
       </section>
 
-      <Section
-        id="ebook"
-        eyebrow="전자책"
-        title="eBook"
-        count={ebookSorted.length}
-        emptyMessage="등록된 eBook이 없습니다."
-        footnote="예스24 / 리디 / 밀리의서재는 곧 추가됩니다."
-      >
-        {ebookSorted.map((offer, i) => (
-          <OfferRow
-            key={i}
-            label="알라딘 eBook"
-            price={offer.price}
-            href={offer.link}
-            badge="알라딘"
+      <section id="ebook" className="scroll-target">
+        <div className="flex items-baseline justify-between mb-3">
+          <div>
+            <div className="text-[11px] font-semibold tracking-[0.1em] uppercase text-steel">
+              전자책
+            </div>
+            <h3 className="display text-[20px] text-ink mt-1">eBook</h3>
+          </div>
+          <div className="text-[12px] text-steel tabular">
+            {ebookSorted.length}개
+          </div>
+        </div>
+        <div className="space-y-2">
+          {ebookSorted.length === 0 ? (
+            <p className="text-[13px] text-steel py-4 px-4 bg-canvas rounded-lg border border-hairline-soft">
+              알라딘에 등록된 eBook이 없습니다.
+            </p>
+          ) : (
+            ebookSorted.map((offer, i) => (
+              <OfferRow
+                key={i}
+                label="알라딘 eBook"
+                price={offer.price}
+                href={offer.link}
+                badge="알라딘"
+              />
+            ))
+          )}
+          <ExternalSearchLink
+            siteName="리디북스"
+            href={buildRidiSearchUrl(primary.book.title)}
+            badge="외부 검색"
           />
-        ))}
-      </Section>
+        </div>
+        <p className="text-[12px] text-stone mt-2">
+          예스24 / 밀리의서재는 곧 추가됩니다.
+        </p>
+      </section>
 
       {alternatives.length > 0 && (
         <section>
